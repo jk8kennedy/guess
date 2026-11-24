@@ -20,4 +20,5 @@ function checkGuess(event) {
         message.textContent = "🎉 Correct! You guessed the number!";
     }
     document.getElementById("guess").value = "";
+    document.getElementById("guess").focus();
 }
