@@ -21,16 +21,34 @@ function checkGuess(event) {
             message.textContent = "Too low! Try again.";
         }
         else {
-            message.textContent = "🎉 Correct! You guessed the number!";
+            message.textContent = "🎉 You Win! You guessed the number!";
+            
+            document.getElementById("playAgain").style.display = "block";
+            document.getElementById("guess").disabled = true;
+            document.querySelector("form button").disabled = true;
         }
 
-        // Update the score
         document.getElementById("score").textContent = "Guesses: " + score;
     }
 
-    // Clear the input
     document.getElementById("guess").value = "";
 
-    // Focus the input again
+    if (guess !== secretNumber) {
+        document.getElementById("guess").focus();
+    }
+}
+
+function restartGame() {
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+    score = 0;
+
+    document.getElementById("score").textContent = "Guesses: 0";
+    document.getElementById("message").textContent = "Good luck!";
+
+    document.getElementById("guess").disabled = false;
+    document.querySelector("form button").disabled = false;
+
+    document.getElementById("playAgain").style.display = "none";
+
     document.getElementById("guess").focus();
 }
