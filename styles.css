@@ -1,99 +1,109 @@
 
-/* General page styling */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #111827;
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* Game container */
+/* Main game card */
 .game-container {
-    background: white;
+    background: #1f2937;
+    width: 100%;
+    max-width: 420px;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
+    border-radius: 16px;
+    border: 1px solid #374151;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Game title */
+/* Heading */
 h1 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 28px;
+    color: #f9fafb;
+    font-size: 26px;
+    text-align: center;
 }
 
 /* Description */
 p {
-    color: #666;
-    margin-bottom: 20px;
+    color: #9ca3af;
     font-size: 16px;
+    text-align: center;
 }
 
-/* Guess input */
+/* Input */
 input {
     width: 100%;
     padding: 14px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    font-size: 18px;
+    background: #111827;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
     text-align: center;
-    margin-bottom: 15px;
     outline: none;
-    transition: border-color 0.3s;
 }
 
 input:focus {
-    border-color: #667eea;
+    border-color: #3b82f6;
 }
 
-/* Guess button */
+/* Button */
 button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #3b82f6;
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    transition: background 0.2s, transform 0.2s;
 }
 
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+    background: #2563eb;
+    transform: translateY(-2px);
 }
 
 button:active {
     transform: translateY(0);
 }
 
-/* Feedback message */
+/* Feedback */
 #message {
-    margin-top: 20px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #667eea;
-    min-height: 25px;
+    color: #60a5fa;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
 }
 
+/* Score */
 #score {
-    margin-top: 20px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #667eea;
-    min-height: 25px;
+    color: #9ca3af;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #374151;
+    width: 100%;
 }
