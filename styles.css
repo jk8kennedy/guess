@@ -125,3 +125,11 @@ input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
+#playAgain {
+    background: #10b981;
+    margin-top: 10px;
+}
+
+#playAgain:hover {
+    background: #059669;
+}
