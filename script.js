@@ -1,7 +1,9 @@
 
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 
-function checkGuess() {
+function checkGuess(event) {
+    event.preventDefault();
+
     let guess = Number(document.getElementById("guess").value);
     let message = document.getElementById("message");
 
