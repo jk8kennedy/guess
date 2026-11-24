@@ -10,18 +10,33 @@
 <body>
 
     <div class="game-container">
+
         <h1>Guess the Number!</h1>
 
         <p>Pick a number between 1 and 100.</p>
 
-        <input type="number" id="guess" placeholder="Enter your guess">
+        <form onsubmit="checkGuess(event)">
 
-        <button onclick="checkGuess()">Guess</button>
+            <input
+                type="number"
+                id="guess"
+                placeholder="Enter your guess"
+                min="1"
+                max="100"
+                required
+            >
+
+            <button type="submit">Guess</button>
+
+        </form>
 
         <p id="message">Good luck!</p>
+
+        <p id="score">Guesses: 0</p>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
-    
 </html>
